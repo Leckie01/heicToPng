@@ -25,14 +25,6 @@ export default function Home() {
       <Grid justify={"center"}>
         <Grid.Col xs={3}>
           <HeaderAction links={links} />
-          {/* <Title
-            style={{
-              marginBottom: "20px",
-              padding: "10px 0",
-            }}
-          >
-            HEIC to PNG
-          </Title> */}
           <DynamicDropzoneButton />
         </Grid.Col>
       </Grid>

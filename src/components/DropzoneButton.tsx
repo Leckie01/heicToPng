@@ -52,6 +52,7 @@ function DropzoneButton() {
   const [file, setFile] = useState<Blob | Blob[]>();
   const [fileName, setFileName] = useState<string>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isRejected, setIsRejected] = useState<boolean>(false);
   const openRef = useRef<() => void>(null);
 
   const downloadConvertedFile = (blob: Blob) => {
@@ -70,12 +71,14 @@ function DropzoneButton() {
 
   return (
     <>
-      <div className={classes.wrapper} style={{ marginBottom: "40px" }}>
+      <div className={classes.wrapper} style={{ marginBottom: "60px" }}>
         <Dropzone
           multiple={false}
           openRef={openRef}
+          onReject={() => setIsRejected(true)}
           onDrop={async (files) => {
             setIsLoading(true);
+            setIsRejected(false);
             const result = await heic2any({ blob: files[0] });
 
             setFileName(files[0]?.name.split(".")[0] || "image");
@@ -84,7 +87,8 @@ function DropzoneButton() {
           }}
           className={classes.dropzone}
           radius="md"
-          accept={["image/heic"]}
+          // onReject={}
+          accept={["image/heic", "image/heif"]}
           maxSize={30 * 1024 ** 2}
         >
           <div style={{ pointerEvents: "none" }}>
@@ -132,6 +136,12 @@ function DropzoneButton() {
           Select file to convert
         </Button>
       </div>
+      {isRejected === true && (
+        <Text size="sm" weight={500} align="center" color="#FF4D4F">
+          Cannot convert if it is not a heic file.
+        </Text>
+      )}
+
       {isLoading === true && (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Loader />
