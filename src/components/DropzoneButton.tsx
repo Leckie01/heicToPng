@@ -75,7 +75,10 @@ function DropzoneButton() {
         <Dropzone
           multiple={false}
           openRef={openRef}
-          onReject={() => setIsRejected(true)}
+          onReject={(files) => {
+            setFileName(files[0].file.name + "");
+            setIsRejected(true);
+          }}
           onDrop={async (files) => {
             setIsLoading(true);
             setIsRejected(false);
@@ -138,7 +141,7 @@ function DropzoneButton() {
       </div>
       {isRejected === true && (
         <Text size="sm" weight={500} align="center" color="#FF4D4F">
-          Cannot convert if it is not a heic file.
+          {`Cannot convert if it is not a heic file. ${fileName}`}
         </Text>
       )}
 
