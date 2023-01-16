@@ -73,16 +73,16 @@ export function HeaderAction({ links }: HeaderActionProps) {
   const { classes } = useStyles();
   const [opened, { toggle }] = useDisclosure(false);
   const items = links.map((link) => {
-    const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
-    ));
+    const menuItems = link.links?.map((item) => {
+      return <Menu.Item key={item.link}>{item.label}</Menu.Item>;
+    });
 
     if (menuItems) {
       return (
         <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
           <Menu.Target>
             <a
-              href={link.link}
+              href={"mailto:hsk0094@gmail.com"}
               className={classes.link}
               onClick={(event) => event.preventDefault()}
             >
@@ -100,9 +100,12 @@ export function HeaderAction({ links }: HeaderActionProps) {
     return (
       <a
         key={link.label}
-        href={link.link}
+        // href={link.link}
         className={classes.link}
-        onClick={(event) => event.preventDefault()}
+        onClick={(event) => {
+          location.href = "mailto:hsk0094@gmail.com";
+          event.preventDefault();
+        }}
       >
         {link.label}
       </a>
@@ -120,7 +123,12 @@ export function HeaderAction({ links }: HeaderActionProps) {
             size="sm"
           />
           {/* <MantineLogo size={28} /> */}
-          <Title>HEIC to PNG</Title>
+          <Title
+            style={{ cursor: "pointer" }}
+            onClick={() => (location.href = "/")}
+          >
+            HEIC to PNG
+          </Title>
         </Group>
         <Group spacing={5} className={classes.links}>
           {items}

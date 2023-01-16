@@ -8,7 +8,7 @@ import {
   Divider,
   Loader,
 } from "@mantine/core";
-import { Dropzone, FileWithPath, MIME_TYPES } from "@mantine/dropzone";
+import { Dropzone } from "@mantine/dropzone";
 import { IconCloudUpload, IconX, IconDownload } from "@tabler/icons";
 import heic2any from "heic2any";
 const getByteSize = (size: number) => {
