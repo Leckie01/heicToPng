@@ -135,7 +135,10 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <Container className={classes.inner} style={{ flexDirection: "column" }}>
+        <Text mb={5} size="sm" color="dimmed">
+          The service does not save any files.
+        </Text>
         <div className={classes.logo}>
           <Text size="md" weight="bold">
             HEIC to PNG
@@ -147,6 +150,25 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
+        <div>
+          <Text
+            onClick={() => {
+              location.href =
+                "https://www.termsofusegenerator.net/live.php?token=wJRWYkt9GHx9WFV7NxT1ZvG3n3GEepPs";
+            }}
+            style={{ cursor: "pointer" }}
+            color="gray"
+            size="sm"
+          >
+            Terms of Use
+          </Text>
+          <a style={{ textDecoration: "none" }} href="mailto:hsk0094@gmail.com">
+            <Text style={{ cursor: "pointer" }} color="gray" size="sm">
+              contact
+            </Text>
+          </a>
+        </div>
+
         <Text color="dimmed" size="sm">
           {`©${new Date().getFullYear()} HEIC to PNG. All rights reserved.`}
         </Text>

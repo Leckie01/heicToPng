@@ -1,15 +1,13 @@
-import { Inter } from "@next/font/google";
-import { Grid, Text, Title } from "@mantine/core";
+import { Grid, Text } from "@mantine/core";
 import dynamic from "next/dynamic";
 import { HeaderAction } from "@/components/HeaderAction";
 import { FooterLinks } from "@/components/FooterLinks";
 
-const links = [
-  {
-    link: "mailto:hsk0094@gmail.com",
-    label: "contact",
-  },
-];
+const links: {
+  link: string;
+  label: string;
+  links?: { link: string; label: string }[] | undefined;
+}[] = [];
 
 const DynamicDropzoneButton = dynamic(
   () => import("@/components/DropzoneButton"),
@@ -22,7 +20,11 @@ export default function Home() {
       <Grid justify={"center"} style={{ height: "100%" }}>
         <Grid.Col
           xs={3}
-          style={{ display: "flex", flexDirection: "column", height: "100%" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+          }}
         >
           <div style={{ flex: 1 }}>
             <HeaderAction links={links} />
