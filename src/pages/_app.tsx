@@ -23,7 +23,11 @@ export default function App(props: AppProps) {
         />
         <meta property="og:title" content="HEICtoPNG" />
         <meta property="og:description" content="Convert HEIC to PNG" />
-        {/* Google tag (gtag.js)  */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1625106868943701"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <Analytics />
       <MantineProvider
