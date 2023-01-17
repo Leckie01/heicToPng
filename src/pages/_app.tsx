@@ -30,23 +30,8 @@ export default function App(props: AppProps) {
         crossOrigin="anonymous"
         strategy="beforeInteractive"
       />
-
-      <Script
-        type="text/javascript"
-        src="//t1.daumcdn.net/kas/static/ba.min.js"
-        async
-        strategy="beforeInteractive"
-      >
-        <ins
-          className="kakao_ad_area"
-          style={{ display: "none" }}
-          data-ad-unit="DAN-C3tQI8PPi8QNyAcs"
-          data-ad-width="300"
-          data-ad-height="250"
-        ></ins>
-      </Script>
-
       <Analytics />
+
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
