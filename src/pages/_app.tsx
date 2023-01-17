@@ -3,7 +3,6 @@ import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import KakaoAdFit from "@/components/KakaoAdFit";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
