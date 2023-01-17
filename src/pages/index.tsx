@@ -2,7 +2,6 @@ import { Grid, Text } from "@mantine/core";
 import dynamic from "next/dynamic";
 import { HeaderAction } from "@/components/HeaderAction";
 import { FooterLinks } from "@/components/FooterLinks";
-import KakaoAdfit from "@/components/KakaoAdfit";
 
 const links: {
   link: string;
@@ -18,7 +17,6 @@ const DynamicDropzoneButton = dynamic(
 export default function Home() {
   return (
     <div style={{ height: "100vh" }}>
-      <KakaoAdfit />
       <Grid justify={"center"} style={{ height: "100%" }}>
         <Grid.Col
           xs={3}

@@ -13,6 +13,18 @@ export default class _Document extends Document {
         <body>
           <Main />
           <NextScript />
+          <ins
+            className="kakao_ad_area"
+            style={{ display: "none" }}
+            data-ad-unit="DAN-C3tQI8PPi8QNyAcs"
+            data-ad-width="300"
+            data-ad-height="250"
+          ></ins>
+          <script
+            type="text/javascript"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            async
+          ></script>
         </body>
       </Html>
     );
