@@ -24,24 +24,6 @@ export default function App(props: AppProps) {
         <meta property="og:title" content="HEICtoPNG" />
         <meta property="og:description" content="Convert HEIC to PNG" />
         {/* Google tag (gtag.js)  */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-1T5VFKV260`}
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-1T5VFKV260', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
       </Head>
       <Analytics />
       <MantineProvider
