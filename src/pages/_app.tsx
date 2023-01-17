@@ -28,7 +28,7 @@ export default function App(props: AppProps) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1625106868943701"
           crossOrigin="anonymous"
         ></script>
-        <ins
+        {/* <ins
           className="kakao_ad_area"
           style={{ display: "none" }}
           data-ad-unit="DAN-C3tQI8PPi8QNyAcs"
@@ -39,7 +39,7 @@ export default function App(props: AppProps) {
           type="text/javascript"
           src="//t1.daumcdn.net/kas/static/ba.min.js"
           async
-        ></script>
+        ></script> */}
       </Head>
       <Analytics />
       <MantineProvider
