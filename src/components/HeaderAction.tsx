@@ -117,13 +117,6 @@ export function HeaderAction({ links }: HeaderActionProps) {
     <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={80}>
       <Container className={classes.inner} fluid>
         <Group>
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-          />
-          {/* <MantineLogo size={28} /> */}
           <Title
             style={{ cursor: "pointer" }}
             onClick={() => (location.href = "/")}

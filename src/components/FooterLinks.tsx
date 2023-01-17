@@ -156,14 +156,18 @@ export function FooterLinks({ data }: FooterLinksProps) {
               location.href =
                 "https://www.termsofusegenerator.net/live.php?token=wJRWYkt9GHx9WFV7NxT1ZvG3n3GEepPs";
             }}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", textAlign: "center" }}
             color="gray"
             size="sm"
           >
             Terms of Use
           </Text>
           <a style={{ textDecoration: "none" }} href="mailto:hsk0094@gmail.com">
-            <Text style={{ cursor: "pointer" }} color="gray" size="sm">
+            <Text
+              style={{ cursor: "pointer", textAlign: "center" }}
+              color="gray"
+              size="sm"
+            >
               contact
             </Text>
           </a>

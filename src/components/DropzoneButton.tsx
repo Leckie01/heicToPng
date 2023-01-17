@@ -125,7 +125,7 @@ function DropzoneButton() {
               <Dropzone.Idle>Upload heic File</Dropzone.Idle>
             </Text>
             <Text align="center" size="sm" mt="xs" color="dimmed">
-              Drag&apos;n&apos;drop files here to upload.
+              Drag&apos;n&apos;drop file here to upload.
             </Text>
           </div>
         </Dropzone>
