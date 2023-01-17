@@ -14,6 +14,14 @@ export default function App(props: AppProps) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta name="description" content="Convert HEIC to PNG" />
+        <meta name="author" content="Leckie" />
+        <meta
+          name="keyword"
+          content="HEIC, PNG, Convert, convert heic, convert png, heic to png"
+        />
+        <meta property="og:title" content="HEICtoPNG" />
+        <meta property="og:description" content="Convert HEIC to PNG" />
       </Head>
       <Analytics />
       <MantineProvider
