@@ -70,7 +70,7 @@ function DropzoneButton() {
   };
 
   return (
-    <>
+    <div style={{ minHeight: "500px" }}>
       <div className={classes.wrapper} style={{ marginBottom: "60px" }}>
         <Dropzone
           multiple={false}
@@ -146,7 +146,13 @@ function DropzoneButton() {
       )}
 
       {isLoading === true && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "40px",
+          }}
+        >
           <Loader />
         </div>
       )}
@@ -178,7 +184,7 @@ function DropzoneButton() {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,8 @@
-import { Grid, Text } from "@mantine/core";
+import { Grid } from "@mantine/core";
 import dynamic from "next/dynamic";
 import { HeaderAction } from "@/components/HeaderAction";
 import { FooterLinks } from "@/components/FooterLinks";
+import { Faq } from "@/components/Faq";
 
 const links: {
   link: string;
@@ -18,7 +19,6 @@ export default function Home() {
   return (
     <div
       style={{
-        height: "100vh",
         backgroundImage: `url('/background.jpg')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -45,6 +45,7 @@ export default function Home() {
           </div>
 
           <div>
+            <Faq />
             <FooterLinks data={[]} />
           </div>
         </Grid.Col>
