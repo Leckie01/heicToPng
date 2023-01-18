@@ -10,10 +10,10 @@ export default class _Document extends Document {
     return (
       <Html>
         <Head />
-        <body>
+        <body style={{ marginTop: "8px" }}>
           <Main />
           <NextScript />
-          <ins
+          {/* <ins
             className="kakao_ad_area"
             style={{ display: "none" }}
             data-ad-unit="DAN-C3tQI8PPi8QNyAcs"
@@ -24,7 +24,7 @@ export default class _Document extends Document {
             type="text/javascript"
             src="//t1.daumcdn.net/kas/static/ba.min.js"
             async
-          ></script>
+          ></script> */}
         </body>
       </Html>
     );
