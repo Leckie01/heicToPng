@@ -24,15 +24,6 @@ export default function App(props: AppProps) {
         <meta property="og:title" content="HEICtoPNG" />
         <meta property="og:description" content="Convert HEIC to PNG" />
       </Head>
-      <style global jsx>{`
-        html,
-        body,
-        body > div:first-child,
-        div#__next,
-        div#__next > div {
-          height: 100%;
-        }
-      `}</style>
       <Analytics />
 
       <MantineProvider

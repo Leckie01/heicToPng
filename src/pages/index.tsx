@@ -35,7 +35,6 @@ export default function Home() {
             flexDirection: "column",
             height: "100%",
             backgroundColor: "#fff",
-            // -webkit-box-shadow: 0px 0px 15px 5px #000000;
             boxShadow: "0px 0px 15px 5px rgba(0,0,0,0.4)",
           }}
         >
