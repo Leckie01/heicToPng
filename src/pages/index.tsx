@@ -22,6 +22,7 @@ export default function Home() {
         backgroundImage: `url('/background.jpg')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        height: "100%",
       }}
     >
       <Grid
@@ -33,7 +34,7 @@ export default function Home() {
           style={{
             display: "flex",
             flexDirection: "column",
-            height: "100%",
+            // height: "100%",
             backgroundColor: "#fff",
             boxShadow: "0px 0px 15px 5px rgba(0,0,0,0.4)",
           }}
